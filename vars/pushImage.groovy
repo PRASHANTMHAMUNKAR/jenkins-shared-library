@@ -9,7 +9,7 @@ def call (String imageName, String imageTag) {
     sh """
       echo "\$DOCKER_PASSWORD" | docker login -u "\$DOCKER_USERNAME" --password-stdin
 
-      docker push ${imageName}:${imageTag}
+      docker push prashantmhamunkar/${imageName}:${imageTag}
 
       docker logout
       """    
